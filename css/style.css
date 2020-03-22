@@ -1,0 +1,193 @@
+/*PLACE ORDER SECTION*/
+#landing-image{
+	position: relative;
+	background: radial-gradient(rgba(0, 0, 0, .8), rgba(20, 0, 0, .8), rgba(20, 0, 20, .8), rgba(20, 20, 20, .8)),
+	url('../images/sku-bg.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	margin-top: 10px;
+	height: calc(100% - 90px);
+	z-index: 1;
+	/*clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vh), 0 100%, 0 0);*/
+}
+#landing-image div{
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+#site-intro{
+	/*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
+	text-align: center;
+	animation: siteIntroAnimation 6s steps(22), blinkSiteIntro 0.4s infinite alternate;
+	animation-iteration-count: infinite;
+	white-space: nowrap;
+	border-right: 3px solid silver;
+	overflow: hidden;
+	text-shadow: 1px .5px 1px;
+	margin-bottom: 0.2em;
+}
+@keyframes siteIntroAnimation{
+	0%{
+		width: 0;
+	}
+	60%{
+		width: 223;
+	}
+	100%{
+		width: 223;
+	}
+}
+@keyframes blinkSiteIntro{
+	from{
+		border-color: transparent;
+	}
+	to{
+		border-color: silver;
+	}
+}
+
+
+/*PLACE ORDER SECTION*/
+#place-order{
+	margin-top: 2.5em;
+}
+#place-order>h2{
+	position: relative;
+	font-size: 1.5em;
+	text-align: center;
+	text-decoration: underline;
+	text-shadow: .5px .5px .5px black;
+	font-weight: bolder;
+	margin: 1em;
+	margin-top: 2em;
+	z-index: 1;
+}
+#place-order>h2::before{
+	position: absolute;
+	content:'ORDER';
+	font-style: italic;
+	font-size: 2.7em;
+	font-weight: bold;
+	top: -0.8em;
+	left: 0;
+	width: 100%;
+	color: red;
+	z-index: -1;
+	opacity: 7%;
+	animation: glow-blinker 3s ease infinite;
+}
+@keyframes glow-blinker{
+	0%,100%{
+		text-shadow: .5px .5px .5px black;
+		opacity: 7%;
+	}50%{
+		text-shadow: .7px .7px .7px black;
+		opacity: 15%;
+	}
+}
+.gp-h{
+	text-align: center;
+	padding: .3em;
+	margin-bottom: 1em;
+	color: #FFE4E1;
+	position:relative;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.gp-h::before,
+.gp-h::after{
+	content:"";
+	position:absolute;
+	z-index:-1;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	box-shadow:0 0 20px rgba(0,0,0,0.8);
+	top:0;
+	bottom:0;
+	left:10px; 
+	right:10px;
+	-moz-border-radius:100px / 10px;
+	border-radius:100px / 10px;
+}
+.gp-h::after{
+	right:10px;
+	left:auto;
+	-webkit-transform:skew(8deg) rotate(3deg);
+	-moz-transform:skew(8deg) rotate(3deg);
+	-ms-transform:skew(8deg) rotate(3deg);
+	-o-transform:skew(8deg) rotate(3deg);
+	transform:skew(8deg) rotate(3deg);
+}
+.gp-ht{
+	border-top: 3px solid #FF4500;
+	border-top-right-radius: 1em;
+	border-top-left-radius: 1em;
+}
+.gp-hb{
+	border-bottom: 3px solid #FF4500;
+	border-bottom-right-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+
+
+/*SINGLE SUYA*/
+.gp-card{
+	position: relative;
+}
+.gp-card-pin{
+	position: absolute;
+	top: -1em;
+	right: -.5em;
+	padding: .5em .1em;
+	background-color: red;
+	max-width: 40%;
+	color: white;
+	display: flex;
+	border-radius: 1em;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.gp-card-pin::before,
+.gp-card-pin::after{
+	content:"";
+	position:absolute;
+	z-index:-1;
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+	box-shadow:0 0 20px rgba(0,0,0,0.8);
+	top:10px;
+	bottom:10px;
+	left:0;
+	right:0;
+	-moz-border-radius:100px / 10px;
+	border-radius:100px / 10px;
+}
+.gp-card-pin::after{
+	right:10px;
+	left:auto;
+	-webkit-transform:skew(8deg) rotate(3deg);
+	-moz-transform:skew(8deg) rotate(3deg);
+	-ms-transform:skew(8deg) rotate(3deg);
+	-o-transform:skew(8deg) rotate(3deg);
+	transform:skew(8deg) rotate(3deg);
+}
+.gp-card-pin p{
+	padding: 0;
+	margin: 0;
+	flex: 1;
+	align-self: center;
+	text-align: center;
+}
+#display-form{
+	background: linear-gradient(30deg, #808080, #C0C0C0, #708090, #778899, #C0C0C0, #808080);
+}

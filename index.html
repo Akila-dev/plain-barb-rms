@@ -1,0 +1,450 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<style type="text/css">
+		.gp-card-bottom{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		@media(min-width: 420px){
+			.gp-card-pin{
+				padding: .5em;
+			}
+			.gp-card-bottom{
+				flex-direction: row;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- MAIN NAVIGATION STARTS -->
+		<nav id="main-nav" class="navbar navbar-expand-lg bg-dark navbar-dark shadow sticky-top" style="border-bottom: 3px solid gold;">
+		    <a class="navbar-brand" href="#" style="text-shadow: .5px .5px .5px; font-size: 20px">
+		    	<img src="./images/sku-beef.jpg" class="rounded-circle" style="width: 40px;">
+		    	<span class="d-none d-md-inline-block" style="color: gold; text-shadow: .5px .5px .5px gold;"> GLOVERCOURT SUYA</span>
+		    </a>
+		    <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#modalMenu" onclick="document.getElementById('main-nav').className = document.getElementById('main-nav').className.replace('sticky-top', '')">
+		    <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar" style="text-shadow: .5px .5px .5px">
+			    <ul class="navbar-nav  text-capitalize">
+			        <li class="nav-item">
+			            <a class="nav-link" href="#">Order</a>
+			        </li>
+			        <li class="nav-item">
+			            <a class="nav-link" href="#">About</a>
+			        </li>
+			        <li class="nav-item">
+			            <a class="nav-link" href="#">Contact</a>
+			        </li>
+			    </ul>
+		    </div>
+
+		    <!-- THE MODAL --> 
+		    <div class="modal fade" id="modalMenu" style="background: radial-gradient(rgba(10, 10, 10, .7), rgba(15, 15, 15, .7), rgba(20, 20, 20, .7));">
+		    	<button type="button" class="close" data-dismiss="modal" onclick="document.getElementById('main-nav').className += 'sticky-top'" style="font-size: 40px; color: white;">&times;</button>
+			    <div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content" style="background-color: rgba(0, 0, 0, 0); border-color: rgba(0, 0, 0, 0);">
+				        <!-- Modal Header -->
+				        <div class="modal-header pb-0" style="border-color: rgba(0, 0, 0, 0);">
+				        	<ul class="nav flex-column w-100">
+				            	<li class="nav-item mx-auto">
+				            		<img src="./images/sku-beef.jpg" class="rounded-circle" style="width: 75px;">
+				            	</li>
+				            	<li class="nav-item w-100 text-center">
+				            		<a href="#" class="btn"><h2 class="text-uppercase text-center" style="color: gold;">GLOVERCOURT SUYA</h2></a>
+				            	</li>
+				            </ul>
+				        </div>
+				        <!-- Modal body -->
+				        <div class="modal-body text-center mt-0">
+				            <ul class="nav flex-column">
+				            	<li class="nav-item">
+				            		<a href="#" class="nav-link btn text-white" style="font-size: 25px; text-shadow: 1px 1px 1px white">Order</a>
+				            	</li>
+				            	<li class="nav-item">
+				            		<a href="#" class="nav-link btn text-white" style="font-size: 25px; text-shadow: 1px 1px 1px white">About</a>
+				            	</li>
+				            	<li class="nav-item">
+				            		<a href="#" class="nav-link btn text-white" style="font-size: 25px; text-shadow: 1px 1px 1px white">Contact</a>
+				            </ul>
+				        </div>
+				    </div>
+			    </div>
+			</div>
+		</nav>
+		<!-- MAIN NAVIGATION END -->
+
+
+		<!-- LANDING IMAGE SECTION START -->
+		<div id="landing-image">
+			<div>
+				<h1 style="color: #FF4500; text-align: center;">WELCOME TO THE SUYA CAPITAL OF LAGOS!</h1>
+				<h2 id="site-intro">GLOVERCOURT</h2>
+			</div>
+		</div>
+		<!-- LANDING IMAGE SECTION END -->
+
+
+		<!-- ORDER PLACEMENT SECTION START -->
+		<div id="place-order">
+			<h2>PLACE YOUR ORDER!</h2>
+			<h1 class="bg-dark gp-h gp-ht" style="font-size: 1.5em;">CHOOSE YOUR SUYA</h1>
+
+			<!-- SUYA CONTAINER START -->
+			<div id="suya-container" class="row">
+				<!-- SINGLE SUYA START -->
+				<div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
+					<div class="card gp-card">
+						<img src="./images/sku-chicken.jpg" class=".card-img-top" style="width: 100%; border-radius: .5em; border-top: .1em solid silver;">
+						<div class="card-body pb-0 px-0">
+							<h2 class="card-title h5 text-center text-uppercase" style="text-shadow: .5px .5px .5px; font-weight: bold">
+								<span id="suya_1">Chicken Suya</span></h2>
+							<div class="py-2 gp-ht px-1 gp-card-bottom" style="font-size: .9em; font-weight: bold; background-color: #FF4500;"><span>QUANTITY:</span>
+								<select class="btn btn-dark py-0 px-1 mx-1" id="suya_1_quantity" onclick="sel('1')">None
+									<option value="0">None</option>
+									<option value="1">1 piece</option>
+									<option value="2">2 pieces</option>
+								</select>
+							</div>
+						</div>
+						<div class="gp-card-pin">
+							<p style="font-weight: bold;">
+								<span style="font-size: 1.1em; color: gold;"><i>&#8358</i><span id="suya_1_price">3000</span></span><br/>
+								<span style="font-size: 0.6em; font-style: oblique;">WHOLE <br/> CHICKEN</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE SUYA END -->
+				<!-- SINGLE SUYA START -->
+				<div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
+					<div class="card gp-card">
+						<img src="./images/sku-beef.jpg" class=".card-img-top" style="width: 100%; border-radius: .5em; border-top: .1em solid silver;">
+						<div class="card-body pb-0 px-0">
+							<h2 class="card-title h5 text-center text-uppercase" style="text-shadow: .5px .5px .5px; font-weight: bold">
+								<span id="suya_2">Beef Suya</span></h2>
+							<div class="py-2 gp-ht px-1 gp-card-bottom" style="font-size: .9em; font-weight: bold; background-color: #FF4500;"><span>QUANTITY:</span>
+								<select class="btn btn-dark py-0 px-1 mx-1" id="suya_2_quantity" onclick="sel('2')">None
+									<option value="0">None</option>
+									<option value="1">1 piece</option>
+									<option value="2">2 pieces</option>
+								</select>
+							</div>
+						</div>
+						<div class="gp-card-pin">
+							<p style="font-weight: bold;">
+								<span style="font-size: 1.1em; color: gold;"><i>&#8358</i><span id="suya_2_price">500</span></span><br/>
+								<span style="font-size: 0.6em; font-style: oblique;">STICK <br/> (LARGE)</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE SUYA END -->
+				<!-- SINGLE SUYA START -->
+				<div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
+					<div class="card gp-card">
+						<img src="./images/sku-tozo.jpg" class=".card-img-top" style="width: 100%; border-radius: .5em; border-top: .1em solid silver;">
+						<div class="card-body pb-0 px-0">
+							<h2 class="card-title h5 text-center text-uppercase" style="text-shadow: .5px .5px .5px; font-weight: bold">
+								<span id="suya_3">Tozo Suya</span></h2>
+							<div class="py-2 gp-ht px-1 gp-card-bottom" style="font-size: .9em; font-weight: bold; background-color: #FF4500;"><span>QUANTITY:</span>
+								<select class="btn btn-dark py-0 px-1 mx-1" id="suya_3_quantity" onclick="sel('3')">None
+									<option value="0">None</option>
+									<option value="1">1 piece</option>
+									<option value="2">2 pieces</option>
+								</select>
+							</div>
+						</div>
+						<div class="gp-card-pin">
+							<p style="font-weight: bold;">
+								<span style="font-size: 1.1em; color: gold;"><i>&#8358</i><span id="suya_3_price">500</span></span><br/>
+								<span style="font-size: 0.6em; font-style: oblique;">STICK <br/> (LARGE)</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE SUYA END -->
+				<!-- SINGLE SUYA START -->
+				<div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
+					<div class="card gp-card">
+						<img src="./images/sku-shaki.jpg" class=".card-img-top" style="width: 100%; border-radius: .5em; border-top: .1em solid silver;">
+						<div class="card-body pb-0 px-0">
+							<h2 class="card-title h5 text-center text-uppercase" style="text-shadow: .5px .5px .5px; font-weight: bold">
+								<span id="suya_4">Shaki Suya</span></h2>
+							<div class="py-2 gp-ht px-1 gp-card-bottom" style="font-size: .9em; font-weight: bold; background-color: #FF4500;"><span>QUANTITY:</span>
+								<select class="btn btn-dark py-0 px-1 mx-1" id="suya_4_quantity" onclick="sel('4')">None
+									<option value="0">None</option>
+									<option value="1">1 piece</option>
+									<option value="2">2 pieces</option>
+								</select>
+							</div>
+						</div>
+						<div class="gp-card-pin">
+							<p style="font-weight: bold;">
+								<span style="font-size: 1.1em; color: gold;"><i>&#8358</i><span id="suya_4_price">500</span></span><br/>
+								<span style="font-size: 0.6em; font-style: oblique;">STICK <br/> (LARGE)</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- SINGLE SUYA END -->
+			</div>
+
+			<!-- TOPPINGS AND COMMENT SECTION START -->
+			<div class="row">
+				<!-- TOPPINGS SECTION START -->
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<h1 class="bg-dark gp-h gp-ht mb-3" style="font-size: 1.5em;">CHOOSE YOUR TOPPINGS</h1>
+					<div class="row">
+						<div class="col-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="bg-dark gp-h gp-hb py-2" style="font-size: .9em; font-weight: bold; display: flex; justify-content: center; align-items: center;">YAGI SPICES:  
+								<div class="dropdown" style="display: inline;">
+								    <button class="btn btn-dark dropdown-toggle py-0 px-1 mx-1" type="button" data-toggle="dropdown" style="font-size: .8em;"><span id="yagi-btn">Yes</span>
+								    <span class="caret"></span>
+									</button>
+								    <div class="dropdown-menu">
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input" type="radio" name="yagi" onclick="toppingYes('yagi')"><span id="yagi-yes">Yes</span>
+											</label>
+										</div>
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input" type="radio" name="yagi" onclick="toppingNo('yagi')"><span id="yagi-no">No</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+							<div class="bg-dark gp-h gp-hb py-2" style="font-size: .9em; font-weight: bold; display: flex; justify-content: center; align-items: center;">ONIONS: 
+								<div class="dropdown" style="display: inline;">
+								    <button class="btn btn-dark dropdown-toggle py-0 px-1 mx-1" type="button" data-toggle="dropdown" style="font-size: .8em;"><span id="onion-btn">Yes</span>
+								    <span class="caret"></span>
+									</button>
+								    <div class="dropdown-menu">
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input" type="radio" name="onion"
+												onclick="toppingYes('onion')"><span id="onion-yes">Yes</span>
+											</label>
+										</div>
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input" type="radio" name="onion"
+												onclick="toppingNo('onion')"><span id="onion-no">No</span>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- TOPPINGS SECTION END -->
+				<!-- COMMENT SECTION START -->
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+					<h1 class="bg-dark gp-h gp-ht mb-0" style="font-size: 1.5em;">ORDER COMMENTS:</h1>
+					<div class="form-group">
+						<label for="order_comments"></label>
+						<textarea class="form-control" id="order_comments" placeholder="Write Comment" rows="5"></textarea>
+					</div>
+				</div>
+				<!-- COMMENT SECTION END -->
+			</div>
+			<!-- TOPPINGS AND COMMENT SECTION END -->
+		</div>
+		<!-- ORDER PLACEMENT SECTION END -->
+
+		<!-- CUSTOMER DETAIL SECTION START -->
+		<div class="row">
+			<!-- INSERT CUSTOMER DETAIL FORM SECTION START -->
+			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+				<div id="customer_detail" style="padding: 0; margin: 0;">
+					<form action="#" class="was-validated pr-3">
+						<div class="form-group">
+							<label for="user_name" style="font-weight: bold;">CUSTOMER NAME</label>
+							<input type="text" class="form-control" id="user_name" placeholder="Enter name" name="user_name">
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">Please enter your name to coninue</div>
+						</div>
+						<div class="form-group">
+							<label for="email" style="font-weight: bold;">EMAIL</label>
+							<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">Please enter your email to coninue</div>
+						</div>
+						<div class="form-group">
+							<label for="phone_number" style="font-weight: bold;">PHONE NUMBER</label>
+							<input type="number" class="form-control" id="phone_number" placeholder="Enter phone number" name="phone_number">
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">Please nter your phone number to coninue</div>
+						</div>
+						<div class="form-group">
+							<label for="location" style="font-weight: bold;">DELIVERY LOCATION</label>
+							<div class="input-group" style="width: 100%;">
+								<div class="input-group-prepend" style="width: 100%;">
+									<button type="button" class="btn btn-outline-secondary btn-full" data-toggle="dropdown" style="width: 100%; text-align: left;" onclick="document.getElementById('location-cont').style.display = 'block';">
+										<span id="locations-btn">Select Delivery Location</span>
+										<span class="fa fa-caret-down float-right"></span>
+									</button>
+									<div id="location-cont" class="dropdown-menu w-100">
+										<!-- =============== START PHP LOOP HERE ============ -->
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input mr-2 gcs-location-radio" type="radio" name="location" onclick="recordLocation('1')"><span class="gcs-location">Lagos</span>
+												<span class="d-none location_price">500</span>
+											</label>
+										</div>
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input mr-2 gcs-location-radio" type="radio" name="location" onclick="recordLocation('2')"><span class="gcs-location">Ikeja</span>
+												<span class="d-none location_price">600</span>
+											</label>
+										</div>
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input mr-2 gcs-location-radio" type="radio" name="location" onclick="recordLocation('3')"><span class="gcs-location">Ijebu-ode</span>
+												<span class="d-none location_price">400</span>
+											</label>
+										</div>
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input mr-2 gcs-location-radio" type="radio" name="location" onclick="recordLocation('4')"><span class="gcs-location">Akure</span>
+												<span class="d-none location_price">1000</span>
+											</label>
+										</div>
+										<div class="form-group form-check mb-1">
+											<label class="form-radio-label my-0">
+												<input class="form-radio-input mr-2 gcs-location-radio" type="radio" name="location" onclick="recordLocation('5')"><span class="gcs-location">Ibadan</span>
+												<span class="d-none location_price">700</span>
+											</label>
+										</div>
+										<!-- =============== END PHP LOOP HERE ============ -->
+									</div>
+								</div>
+							</div>
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">Please select your location to continue</div>
+						</div>
+						<div id="address_container" class="form-group d-none">
+							<label for="address" style="font-weight: bold;">DELIVERY ADDRESS</label>
+							<textarea class="form-control" id="user_address" placeholder="Write Address" rows="5"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- INSERT CUSTOMER DETAIL FORM SECTION END -->
+			<!-- DISPLAY CUSTOMER DETAIL SECTION START -->
+			<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7">
+				<h1 class="bg-dark gp-h gp-ht mb-0" style="font-size: 1.5em;">PLEASE REVIEW YOUR ORDER</h1>
+				<div>
+					<p class="jumbotron text-center pb-3 pt-5 mb-0" style="border-bottom: .2em solid #FF4500; box-shadow: 0 8px 6px -6px black;">
+						Your order summary is as shown below. If you have made any errors, please correct them before you place your order. Incorrect information may delay processing of orders.
+					</p>
+					<div id="display-form">
+						<img class="mx-auto d-block p-2" src="./images/logo.png" style="width: 275px;">
+						<div class="px-4">
+							<p class="w-100 px-2" style="font-weight: bold;">Name: 
+								<span id="name_display" style="font-weight: normal;"></span>
+							</p>
+							<p class="w-100 px-2" style="font-weight: bold;">Email:
+								<span id="email_display" style="font-weight: normal;"></span>
+							</p>
+							<p class="w-100 px-2" style="font-weight: bold;">Phone number:
+								<span id="phone_no_display" style="font-weight: normal;"></span>
+							</p>
+							<p class="w-100 px-2" style="font-weight: bold;">Address:
+								<span id="address_display" style="font-weight: normal;"></span>
+							</p>
+							<p class="w-100 px-2" style="font-weight: bold;">Order Comments:
+								<span id="comment_display" style="font-weight: normal;"></span>
+							</p>
+						</div>
+						<!-- DISPLAY CUSTOMER ORDER SECTION START -->
+						<div class="px-3">
+							<div class="row px-3">
+								<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" style="font-weight: bold;">Desc.</div>
+								<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center" style="font-weight: bold;">Qty</div>
+								<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right" style="font-weight: bold;">Cost(&#8358)</div>
+							</div>
+							<div style="border-top: .3em solid #FF4500; border-bottom: .3em solid #FF4500">
+								<div>
+									<div id="suya_1_purchase" class="row suya_purchased px-3 py-1 d-none">
+										<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 suya_desc"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_qty text-center"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_cost text-right"></div>
+									</div>
+									<div id="suya_2_purchase" class="row suya_purchased px-3 py-1 d-none">
+										<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 suya_desc"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_qty text-center"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_cost text-right"></div>
+									</div>
+									<div id="suya_3_purchase" class="row suya_purchased px-3 py-1 d-none">
+										<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 suya_desc"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_qty text-center"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_cost text-right"></div>
+									</div>
+									<div id="suya_4_purchase" class="row suya_purchased px-3 py-1 d-none">
+										<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 suya_desc"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_qty text-center"></div>
+										<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_cost text-right"></div>
+									</div>
+								</div>
+								<div id="yagi-display" class="row px-3 py-1">
+									<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 suya_desc">Yaji Spices</div>
+									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_qty text-center"></div>
+									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_cost text-right">0</div>
+								</div>
+								<div id="onion-display" class="row px-3 py-1">
+									<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 suya_desc">Onions</div>
+									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_qty text-center"></div>
+									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_cost text-right">0</div>
+								</div>
+								<div class="row px-3 py-1">
+									<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 suya_desc">
+										<span id="locations-display"></span></div>
+									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_qty text-center"></div>
+									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 suya_cost text-right"><span id="location-price-display"></span></div>
+								</div>
+								<span id="additional_info" class="px-3 pb-1 d-none" style="font-size: .9em; font-style: oblique; color: #FF4500;">*Delivery to first and third round about would cost more</span>
+							</div>
+							<div class="row px-3 pb-4">
+								<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" style="font-weight: bold;">
+									<span id="total-label" class="d-none">Total</span></div>
+								<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+								<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right" style="font-weight: bold;"><span id="total-price" class="d-none"></span>
+								</div>
+							</div>
+						</div>
+						<!-- DISPLAY CUSTOMER ORDER SECTION END -->
+					</div>
+				</div>
+			</div>
+			<!-- DISPLAY CUSTOMER DETAIL SECTION END -->
+			<button id="order-btn" type="submit" class="btn btn-dark mx-auto my-3 p-3" style="font-size: 20px; font-weight: bold;">Place Your Order</button>
+		</div>
+		<!-- CUSTOMER DETAIL FORM SECTION END -->
+
+
+	</div>
+
+
+
+
+
+<script src="./scripts/jquery-3.3.1.min.js" charset="utf-8"></script>
+<script src="./scripts/popper.min.js" charset="utf-8"></script>
+<script src="./scripts/bootstrap.min.js" charset="utf-8"></script>
+<script src="./scripts/script_ss.js" charset="utf-8"></script>
+</body>
+</html>
